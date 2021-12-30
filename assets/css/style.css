@@ -35,6 +35,7 @@
     left: 0;
     right: 0;
     width: 100%;
+   z-index: 1;
     border-bottom: 0.1rem solid lightgray;
 }
 
@@ -88,4 +89,31 @@ a{
 .menu ul li a:hover::after{
     width: 50%;
     left: 25%;
+}
+
+.menu-spacing{
+    min-height: 65px;
+}
+
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--gap);
+    min-height: 100vh;
+    position: relative;
+    top: -8rem;
+}
+/*
+.intro-text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+*/
+
+.intro-img img{
+    width: 100%;
+    height: auto;
 }
