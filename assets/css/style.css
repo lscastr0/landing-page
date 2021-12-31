@@ -17,7 +17,7 @@
 .main-content{
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 10rem;
 }
 
 .section{
@@ -130,7 +130,7 @@ a{
 
 .top3-grid{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     min-height: 100vh;
 }
@@ -167,3 +167,17 @@ a{
     transform: rotate(7deg);
 }
 
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.gallery-img img{
+   transition: all 360ms ease-in-out;
+}
+.gallery-img img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+    
+}
