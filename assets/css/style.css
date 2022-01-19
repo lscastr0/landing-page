@@ -253,9 +253,17 @@ body .full-width{
 }
 
 #footer{
-    text-align: center;
     font-size: 1.6rem;
+    text-align: center;
+    padding: 2rem;
 }
+
+#footer p{
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
 
 @media (max-width: 800px){
     .intro-content{
