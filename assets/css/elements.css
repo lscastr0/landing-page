@@ -53,3 +53,28 @@ h6{
 p{
     margin-bottom: 3rem;
 }
+
+table{
+    border-collapse: collapse;
+    min-width: 360px;
+    width: 100%;
+}
+
+caption{
+    text-align: left;
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+table td, table th{
+    text-align: left;
+    border: 0.1rem solid lightgray;
+    padding: 0.5rem;
+    white-space: nowrap;
+
+}
+
+tfoot td, table th{
+    background-color: lightgray;
+}

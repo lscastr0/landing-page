@@ -91,32 +91,26 @@ a{
     left: 25%;
 }
 
-.menu-spacing{
-    min-height: 6.5rem;
-    width: 1.5rem;
-    background-color: black;
-}
-
-.intro-content{
+.intro-content {
+    position: relative;
+    /* top: -8rem; */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    align-items: center;
     gap: var(--gap);
     min-height: 100vh;
-    position: relative;
 }
 
-.intro-text-content, .intro-img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+.intro-text-content, .intro-img {
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
 }
 
 
-.intro-img img{
-    width: 100%;
-    height: auto;
+.intro-img img,
+.intro-img svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .top3-content{
@@ -191,33 +185,8 @@ a{
 }
 
 #responsive-table{
-    overflow-y: auto;
-    max-width: 40rem;
-}
-
-table{
-    border-collapse: collapse;
-    min-width: 360px;
-    width: 100%;
-}
-
-caption{
-    text-align: left;
-    font-style: italic;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-table td, table th{
-    text-align: left;
-    border: 0.1rem solid lightgray;
-    padding: 1rem;
-    white-space: nowrap;
+    overflow: hidden;
     overflow-x: auto;
-}
-
-tfoot td, table th{
-    background-color: lightgray;
 }
 
 .contact-form{
@@ -232,16 +201,14 @@ tfoot td, table th{
     gap: var(--gap);
 }
 
-
-
 .form-grid legend{
     font-style: italic;
-    font-style: 1.6rem;
+    font-size: 6rem;
     margin-bottom: 3rem;
 }
 
 .form-group{
-    flex: 1 1 32rem;
+    flex: 1 1 320px;
 }
 
 .form-group label{
@@ -294,6 +261,7 @@ body .full-width{
     .intro-content{
         grid-template-columns: 1fr;
     }
+
     .top3-grid-content, .top3-grid{
         grid-template-columns: 1fr;
     }
@@ -307,5 +275,58 @@ body .full-width{
     .gallery-img img{
         width: 100%;
     }
+    
+    .menu {
+        bottom: 0;
+        display: none;
+    }
+    
+    .menu-content, .menu ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .menu-content {
+        height: 100vh;
+    }
+
+    .close-menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: none;
+    }
+
+    .close-menu-label::after{
+        content: '☰';
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 2;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu{
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        content: 'x';
+    }
+    
+    .form-grid legend{
+        font-size: 5.6rem;
+    }
+    
+    
 }
